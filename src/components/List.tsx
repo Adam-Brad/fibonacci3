@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {Box} from "@material-ui/core";
 
 interface ListProps {
     list: number[];
@@ -9,14 +10,14 @@ const List = (props: ListProps) => {
     const { list } = props;
 
     const displayedList = list.map(number => (
-            <span>{number} </span>
+            <span>{number.toLocaleString()} </span>
         )
     );
 
     return (
-        <div>
+        <Box>
             {displayedList}
-        </div>
+        </Box>
     );
 };
 
