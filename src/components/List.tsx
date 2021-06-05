@@ -1,15 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Box} from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 interface ListProps {
     list: number[];
 }
 
 const List = (props: ListProps) => {
-    const { list } = props;
-
-    const displayedList = list.map(number => (
+    const displayedList = props.list.map(number => (
             <span>{number.toLocaleString()} </span>
         )
     );

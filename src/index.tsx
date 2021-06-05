@@ -3,13 +3,14 @@ import { render } from 'react-dom';
 import { createStore } from "redux";
 import { fibonacciReducer } from "./reducers/fibonacciReducer"
 import { Provider } from "react-redux";
-import { FibonacciContainer } from "./components/Fibonacci";
+import { Fibonacci } from "./components/Fibonacci";
 
-const store = createStore(fibonacciReducer);
+// @ts-ignore
+const store = createStore(fibonacciReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 render(
     <Provider store={store}>
-        <FibonacciContainer/>
+        <Fibonacci/>
     </Provider>,
     document.getElementById('root')
 );

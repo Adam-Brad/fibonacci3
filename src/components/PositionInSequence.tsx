@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from "react-redux";
 import { Typography } from '@material-ui/core';
 
-
 interface PositionInSequenceProps {
     positionInSequence: number;
 }

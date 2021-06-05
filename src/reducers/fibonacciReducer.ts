@@ -13,7 +13,7 @@ export const fibonacciReducer = (state = initialState, action: Action<string>) =
             return {
                 previousNumber: state.currentNumber,
                 currentNumber: state.previousNumber + state.currentNumber,
-                positionInSequence: state.positionInSequence += 1,
+                positionInSequence: state.positionInSequence + 1,
                 list: [...state.list, state.currentNumber]
             };
         default:
